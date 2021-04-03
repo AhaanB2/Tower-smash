@@ -111,6 +111,12 @@ function touchMoved() {
   if (value > 255) {
     value = 0;
   }
+  
+  ellipse(mouseX, mouseY, 5, 5);
+  // prevent default
+  return false;
+
+  
 }
 
 
