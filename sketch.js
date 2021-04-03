@@ -43,6 +43,7 @@ World.add(world,polygon);
   
   
 }
+let value = 0;
 
 function draw() {
   
@@ -80,8 +81,9 @@ function draw() {
 
   imageMode(CENTER)
   image(polygonImg, polygon.position.x, polygon.position.y, 40,40)
-
- 
+  
+ fill(value);
+  rect(25, 25, 50, 50);
  
 }
 
@@ -104,6 +106,13 @@ function keyPressed(){
      sling.attach(this.polygon)
   }
 }
+function touchMoved() {
+  value = value + 5;
+  if (value > 255) {
+    value = 0;
+  }
+}
+
 
 async function getTime(){
 
