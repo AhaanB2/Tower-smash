@@ -15,7 +15,7 @@ function preload(){
 }
 
 function setup() {
- canvas = createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, windowHeight);
   stroke(255)
   engine = Engine.create();
   world = engine.world;
@@ -43,7 +43,6 @@ World.add(world,polygon);
   
   
 }
-let value = 0;
 
 function draw() {
   
@@ -81,9 +80,8 @@ function draw() {
 
   imageMode(CENTER)
   image(polygonImg, polygon.position.x, polygon.position.y, 40,40)
-  
- fill(value);
-  rect(25, 25, 50, 50);
+
+ 
  
 }
 
@@ -106,19 +104,6 @@ function keyPressed(){
      sling.attach(this.polygon)
   }
 }
-function touchMoved() {
-  value = value + 5;
-  if (value > 255) {
-    value = 0;
-  }
-  
-  ellipse(mouseX, mouseY, 5, 5);
-  // prevent default
-  return false;
-
-  
-}
-
 
 async function getTime(){
 
