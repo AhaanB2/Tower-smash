@@ -89,12 +89,12 @@ function draw() {
 
 
 
-function mouseDragged(){
+function touchMoved(){
   Matter.Body.setPosition(this.polygon, {x: mouseX , y: mouseY});
 }
 
 
-function mouseReleased(){
+function touchEnded(){
   sling.fly();
 }
 
